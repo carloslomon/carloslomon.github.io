@@ -99,8 +99,7 @@ let desc = {
     "ls": "Lists all available documents in the current working directory",
     "cd": "Changes directory (eg 'cd social_handles' goes to the social_handles dir, 'cd' goes to root, 'cd' goes to the current directory, 'cd ..' goes to the directory above the current directory)",
     "credits": "References the libraries used to make this simple web terminal.",
-    "echo": "Prints the words that follow it in the terminal (eg 'echo hello world' will print hello world on the terminal)",
-    "bio": "Prints a brief set of biographical facts"
+    "echo": "Prints the words that follow it in the terminal (eg 'echo hello world' will print hello world on the terminal)"
 }
 
 
