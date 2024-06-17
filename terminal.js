@@ -18,9 +18,8 @@ const formatter = new Intl.ListFormat('en',
 
 let directories = {
     bio: [
-        '',
+        '\n',
         '<white>BI/Ography</white>',
-        
         '<green>I put the "I/O" in BI/Ography. In other unrelated news, I never won a spelling B, or however it is written. </green>',
         '<green>I was born and raised in Costa Rica.</green>', 
         '<green>I love nature, sports, and comedy.</green>',
