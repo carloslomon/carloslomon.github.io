@@ -2,10 +2,10 @@
   <html>
     <head>
       <meta charset="UTF-8">
-     
-  
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-      <link rel="stylesheet" src="./main.css" />
+      <link rel="stylesheet" src="./style.css" />
     </head>
     <body class=""> 
       <style>
@@ -22,14 +22,15 @@
         }
       </style>
         
-        <div class="container">
+        <div class="container-xxl">
           <nav class="navbar bg-dark navbar-dark navbar-expand-sm fixed-top">
             <a  id="brand" class="navbar-brand" href="#" style="font-size: 1.85 em"><strong>CALM</strong></a>
           </nav>
             <br>
             <br>
-            <div class="container">
+            <div class="container-fluid">
               <style>
+                  
                   @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
                   body {
                     background-color: #010;
@@ -44,8 +45,9 @@
                     align-items: center;
                     justify-content: center;
                     height: 100vh;
-                    letter-spacing: 1px;
+                    letter-spacing: 1.2px;
                     line-height:2
+                    width: 100%;
                   }
 
                   #carlos_title{
@@ -90,29 +92,59 @@
                 <div class ="title">
                   <h1 id="carlos_title" style="text-align:center">Carlos Alberto Lopez Montealegre</h1>
                 </div>
-            
             </div>
         </div>
         <style>
-          .norm-titles{
-            color: #fff; 
-            font-family:'Times New Roman', Times, serif;
-            text-align: center;
-            font-size: 1.35em;
-          }
-          .norm-text{
-            color: #fff; 
-            font-family:'Times New Roman', Times, serif;
-            text-align: center;
+          .borders{
+            border-top: 5px dotted #fff;
+            width: 100%;
+            
+
           }
         </style>
-        <br>
-        <hr style="border-top: 3px dotted #fff">
-        <br>
-        <div class="title>
-          <h2>Contact me through WhatsApp</h2>
+        <hr class="borders"/> 
+        <hr class="borders"/>
+        <div class="container-xxl" id="terminal">
+          <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+          <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/figlet/lib/figlet.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/isomorphic-lolcat"></script>
+          <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/xml_formatting.js"></script>
+
+          <script src="terminal.js"></script>
+
         </div>
+        <hr class="borders"/> 
+        <hr class="borders"/> 
         <div class="container">
+          <style>
+            .norm-titles{
+              color: #fff; 
+              font-family:'Times New Roman', Times, serif;
+              text-align: center;
+              font-size: 1.35em;
+            }
+            .norm-text{
+              color: #fff; 
+              font-family:'Times New Roman', Times, serif;
+              text-align: center;
+            }
+            .form-title{
+              font-family: "Monoton";
+                      text-align: center;
+                      color: #FFF;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      padding: 1.25em;
+            }
+            .border{
+              width: 100%;
+              border-top: 3px dotted #fff;
+            }
+          </style>
+                  <h2 class="form-title">Contact me through WhatsApp</h2>
           <!--<h2 class="norm-titles">Contact Me</h2>-->
           <div class="norm-titles">
             
@@ -403,27 +435,25 @@
         </div>
         <br>
         <br>
-        <footer class="bg-dark text-center text-white">
-          <!-- Grid container -->
-          <div class="container bg-dark">
-
-      
-                <!-- Linkedin -->
-                <a class="btn btn-dark btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/calm2266/" role="button"
-                  >LinkedIn</i
-                ></a>
+        <div class="footer container-xxl bg-dark">
+          <footer class="footer mt-auto bg-dark text-center text-white">
+            <!-- Grid container -->
         
-                <!-- Github -->
-                <a class="btn btn-dark btn-outline-light btn-floating m-1" href="https://github.com/carloslomon" role="button"
-                  >Github</i
-                ></a>
+                  <!-- Linkedin -->
+                  <a class="btn btn-dark btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/calm2266/" role="button"
+                    >LinkedIn</i
+                  ></a>
+          
+                  <!-- Github -->
+                  <a class="btn btn-dark btn-outline-light btn-floating m-1" href="https://github.com/carloslomon" role="button"
+                    >Github</i
+                  ></a>
 
-                <!-- Medium -->
-                <a class="btn btn-dark btn-outline-light btn-floating m-1" href="https://medium.com/@the-bamboozling-bits-of-carlos" role="button"
-                  >Medium</i
-                ></a>
-      
-          </div>
+                  <!-- Medium -->
+                  <a class="btn btn-dark btn-outline-light btn-floating m-1" href="https://medium.com/@the-bamboozling-bits-of-carlos" role="button"
+                    >Medium</i
+                  ></a>
         </footer>  
+      </div>
     </body>
   </html>
