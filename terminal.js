@@ -47,7 +47,7 @@ let directories = {
             'R', 
             'SQL', 
             'TypeScript'
-        ].map(lang => `*<blue>${lang}</blue>`),
+        ].map(lang => `*<green>${lang}</green>`),
         '',
         '<orange>Libraries</orange>',
         ...[
@@ -59,14 +59,14 @@ let directories = {
             'React.js',
             'SciPy',
             'STL',
-        ].map(lib => `*<blue>${lib}</blue>`),
+        ].map(lib => `*<green>${lib}</green>`),
         '',
         '<orange>Tools</orange>',
         ...[
             'Git',
             'Linux',
             'Eclipse'
-        ].map(tool => `*<blue>${tool}</blue>`),
+        ].map(tool => `*<green>${tool}</green>`),
         ''
     ],
     social_handles: [
