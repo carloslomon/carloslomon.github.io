@@ -24,20 +24,20 @@ let directories = {
         '<green>I was born and raised in Costa Rica.</green>', 
         '<green>I love nature, sports, and comedy.</green>',
         '<green>I have a strong conviction that all people should strive to build a more sustainable future with whatever means they posses.</green>', 
-        '<green>Thus, I want to contribute to the knowledge we have developed so far in CS to advance human endeavors and the preservation of peace and life.</green>',
+        '<green>I want to contribute to the knowledge we have developed so far in CS to advance human capital development and the preservation of peace and life.</green>',
+        '<green>Thus, I am getting my act together to hopfully make something out of all these bits of time!</green>',
         '<green>Peace Out!</green>', 
         ''
-
     ],
 
     education: [
         '', '<orange>Education</orange>',
-        '* <a href="https://www.columbia.edu"><blue>Columbia University in the City of New York</blue></a><yellow> BA Computer Science</yellow><white> 2020-2024</white>',
-        '* <a href="https://www.berkeleycr.com"><blue>Berkeley Academy Costa Rica</blue></a><yellow> High School Diploma</yellow><white> 2016-2020</white>',
+        '* <a href="https://www.columbia.edu"><green>Columbia University in the City of New York</green></a><yellow> BA Computer Science</yellow><white> 2020-2024</white>',
+        '* <a href="https://www.berkeleycr.com"><green>Berkeley Academy Costa Rica</green></a><yellow> High School Diploma</yellow><white> 2016-2020</white>',
         ''
     ],
     programming_skills: [
-        '', '<orange>Programming Languages</orange>',
+        '\n', '<orange>Programming Languages</orange>',
         ...[
             'Bash',
             'C', 
@@ -51,21 +51,25 @@ let directories = {
         '',
         '<orange>Libraries</orange>',
         ...[
+            'C++ STL',
             'Matplotlib',
             'Node.js',
             'NumPy',
-            'Pandas', 
+            'Pandas',
+            'Pybullet', 
             'PyTorch', 
             'React.js',
             'SciPy',
-            'STL',
+            'C++ STL'
         ].map(lib => `*<green>${lib}</green>`),
         '',
         '<orange>Tools</orange>',
         ...[
+            'Docker',
             'Git',
             'Linux',
-            'Eclipse'
+            'Eclipse',
+
         ].map(tool => `*<green>${tool}</green>`),
         ''
     ],
@@ -98,7 +102,8 @@ let desc = {
     "ls": "Lists all available documents in the current working directory",
     "cd": "Changes directory (eg 'cd social_handles' goes to the social_handles dir, 'cd' goes to root, 'cd' goes to the current directory, 'cd ..' goes to the directory above the current directory). You can\'t use 'cd ../<dir_name>',so just use 'cd <dir_name>' from any directory!",
     "credits": "References the libraries used to make this simple web terminal.",
-    "echo": "Prints the words that follow it in the terminal (eg 'echo hello world' will print hello world on the terminal)"
+    "echo": "Prints the argument words that follow its function call in the terminal (eg 'echo hello world' will print hello world on the terminal)",
+    "revecho": "Prints the argument words that follow its function call in reverse in the terminal (eg 'echo hello world' will print world hello on the terminal)"
 }
 
 
@@ -163,6 +168,12 @@ commands = {
     echo(...args) {
         if (args.length > 0) {
             term.echo(args.join(' '));
+        }
+    }
+    ,revecho(...args){
+        if(args.length > 0){
+            tmp = args.reverse()
+            term.echo(tmp.join(' '));
         }
     }
 }
