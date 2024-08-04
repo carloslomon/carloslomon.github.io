@@ -20,20 +20,18 @@ let directories = {
     bio: [
         '\n',
         '<white>BI/Ografía</white>',
-        '<font color="#00ff00">Yo escribo b-I/O-grafía biografía con ‘I/O’. En otras noticias no relacionadas, nunca he ganado una competencia de deletreo.</font>',
-        '<font color="#00ff00">Yo nací y crecí en Costa Rica. Me encanta la naturaleza, los deportes y la comedia.</font>',
-        '<font color="#00ff00">Tengo una gran convicción de que todas las personas deben construir un futuro más sostenible con todos los medios que tengan.</font>',
-        '<font color="#00ff00">Yo quiero mejorar el conocimiento actual sobre la informática para mejorar la economía mundial y la preservación de la vida y la paz.</font>',
-        '<font color="#00ff00">Pura vida!</font>',
-        ''
+        '<font color="#00ff00">**Yo escribo b-I/O-grafía biografía con ‘I/O’. En otras noticias no relacionadas, nunca he ganado una competencia de deletreo.**</font>\n',
+        '<font color="#00ff00">**Yo nací y crecí en Costa Rica. Me encanta la naturaleza, los deportes y la comedia.**</font>',
+        '<font color="#00ff00">**Tengo una gran convicción de que todas las personas deben construir un futuro más sostenible con todos los medios que tengan.**</font>\n',
+        '<font color="#00ff00">**Yo quiero mejorar el conocimiento actual sobre la informática para mejorar la economía mundial y la preservación de la vida y la paz.**</font>\n',
+        '<font color="#00ff00">**Pura vida!**</font>\n'
     ],
 
     educacion: [
         '', '<orange>Education</orange>',
-        '* <a href=""><font color="#00ff00">Haga clic derecho sobre el nombre de la institución y seleccione abrir nueva ventana (Haga lo mismo para esta indicación)</font></a>',
-        '* <a href="https://www.columbia.edu"><font color="#ccffff">Columbia University in the City of New York</font></a><yellow> BA Computer Science</yellow><white> 2020-2024</white>',
-        '* <a href="https://www.berkeleycr.com"><font color="#ccffff">Berkeley Academy Costa Rica</font></a><yellow> High School Diploma</yellow><white> 2016-2020</white>',
-        ''
+        '<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><font color="#00ff00">**Haga clic derecho sobre el nombre de la institución y seleccione abrir nueva ventana (Haga lo mismo para esta indicación)**</font></a>\n',
+        '**<a href="https://www.columbia.edu"><font color="#ccffff">Columbia University in the City of New York</font></a><yellow> BA Computer Science</yellow><white> 2020-2024</white>**\n',
+        '**<a href="https://www.berkeleycr.com"><font color="#ccffff">Berkeley Academy Costa Rica</font></a><yellow> High School Diploma</yellow><white> 2016-2020</white>**\n '
     ],
     habilidades: [
         '\n', '<orange>Lenguajes de Programación</orange>',
@@ -81,7 +79,7 @@ let directories = {
             ['Medium', 'https://the-bamboozling-bits-of-carlos.medium.com'],
             ['YouTube', 'https://www.youtube.com/channel/UCEv2DXoVgewUOWWVhdKYi2A'],
             ['X', 'https://x.com/BamboozlingBit']
-        ].map(([handle, link]) => `<font color="#00ff00"><a href="${link}">${handle}</a></font>`),
+        ].map(([handle, link]) => `**<font color="#00ff00"><a href="${link}">${handle}</a></font>**`),
         ''
     ]
 };
@@ -90,29 +88,29 @@ let directories = {
 const dirs = Object.keys(directories);
 
 function print_dirs() {
-    term.echo(dirs.map(dir => `<font color="#00ff00" class="directory">${dir}</font>`).join('\n'));
+    term.echo(dirs.map(dir => `<font color="#ff00ff" class="directory">${dir}</font>`).join('\n'));
 }
 
 function prompt(){
-    return `<orange>${user}@${server}:</orange><font color="#00ff00">${cwd}</font>$ `
+    return `<font color="#00ff00">${user}@${server}:</font><font color="#00ff00">${cwd}$</font> `
 }
 
 let desc = {
-    "help": "Escribe la lista de todos los comandos disponibles.",
-    "ls": "Lists all available documents in the current working directory",
-    "cd": "Cambia el directorio (e.d. 'cd redes_sociales' va al directorio de redes sociales)",
-    "creditos":  "Hace referencia a las bibliotecas informáticas que aparecen en esta página web.",
-    "echo": "Imprime en la línea de comando las palabras que siguen después del comando echo (ej. 'echo hello world' imprime 'hello world' en la terminal)",
-    "revecho": "Imprime en la línea de comando las palabras que siguen después del comando  revecho pero en reversa (ej. 'revecho hello world' imprime ‘world hello’ en la terminal)",
-    "clear": "Limpia toda la terminal",
-    "renderecho": "Imprime una representación de arte ascii de las palabras escritas después del comando  (eg 'renderecho hello’)"
+    '<font color="red">**help': "Escribe la lista de todos los comandos disponibles.**</font>",
+    '<font color="#00ff00">**ls': "Lists all available documents in the current working directory**</font>",
+    '<font color="#00ffff">**cd': "Cambia el directorio (e.d. 'cd redes_sociales' va al directorio de redes sociales)**</font>",
+    '<font color="#ff00ff">**creditos':  "Hace referencia a las bibliotecas informáticas que aparecen en esta página web.**</font>",
+    '<font color="#fbff71">**echo': "Imprime en la línea de comando las palabras que siguen después del comando echo (ej. 'echo hello world' imprime 'hello world' en la terminal)**</font>",
+    '<font color="orange">**revecho': "Imprime en la línea de comando las palabras que siguen después del comando  revecho pero en reversa (ej. 'revecho hello world' imprime ‘world hello’ en la terminal)**</font>",
+    '<font color="#1affa7">**clear': "Limpia toda la terminal",
+    '<font color="#00ffff">**renderecho': "Imprime una representación de arte ascii de las palabras escritas después del comando  (eg 'renderecho hello’)**</font>"
 }
 
 
 commands = {
     help() {
         let tmpText = Object.entries(desc).map(([k,v])=> `${k}: ${v}`).join('\n');
-        term.echo(`Lista de los comandos disponibles:\n${tmpText}`);
+        term.echo(`<font color="yellow">Lista de los comandos disponibles:</font>\n\n${tmpText}`);
     },
     ls(dir = null) {
         if (dir) {
@@ -210,11 +208,11 @@ function render(text) {
 
 function ready() {
     term.echo(render('¡Bienvenido!'))
-    term.echo("Escriba 'help' en la terminal y oprima enter para aprender más sobre mi!")
-    term.echo("Escriba 'ls' y oprima enter para listar todos los directorios")
-    term.echo("Cuando ya elija un directorio escriba ‘cd <nombre del directorio>’ y oprima enter")
-    term.echo("Subsecuentemente escribe ‘ls’ otra vez y oprima enter para ver los contenidos del directorio")
-    term.echo("Para volver a la página principal escriba solo ‘cd’ y oprima enter")
+    term.echo('<font color="#00ffff">Escriba "help" en la terminal y oprima enter para aprender más sobre mi!</font>')
+    term.echo('<font color="#00ffff">Escriba "ls" y oprima enter para listar todos los directorios</font>')
+    term.echo('<font color="#00ffff">Cuando ya elija un directorio escriba ‘cd <nombre del directorio>’ y oprima enter</font>')
+    term.echo('<font color="#00ffff">Subsecuentemente escribe ‘ls’ otra vez y oprima enter para ver los contenidos del directorio</font>')
+    term.echo('<font color="#00ffff">Para volver a la página principal escriba solo ‘cd’ y oprima enter</font>')
 }
 term.on('mouseup', '.terminal-output textarea, .terminal-output input', function(e) {
     term.disable();
