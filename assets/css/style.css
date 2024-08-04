@@ -1,0 +1,15 @@
+#terminal{
+    color: #00ff00;
+    background: #000;
+    font-size: 2.5em;
+}
+:root {
+    --color: #00ff00;
+    --background: #000;
+    --size: 2.5em;
+    /* --glow: 1 */
+    --animation: terminal-blink;
+}
+.command, .directory {
+    cursor: pointer;
+}
