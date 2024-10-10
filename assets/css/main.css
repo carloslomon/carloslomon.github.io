@@ -2102,3 +2102,15 @@ iframe{
 	size: 1.5em;
 	height: 25em;
 }
+
+#point-bold{
+	weight: bold;
+	color: black;
+
+}
+
+#logo-f{
+	size: 1.5em;
+	margin-left: 11em;
+
+}
