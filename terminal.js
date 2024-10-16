@@ -23,9 +23,9 @@ let directories = {
         '<green>I put the "I/O" in BI/Ography. In other unrelated news, I never won a spelling B, or however it is written. </green>',
         '<green>I was born and raised in Costa Rica.</green>', 
         '<green>I love nature, sports, and comedy.</green>',
-        '<green>I have a strong conviction that all people should strive to build a more sustainable future with whatever means they posses.</green>', 
+        '<green>I have a strong conviction that all people should strive to build a more sustainable future with whatever means they possess.</green>', 
         '<green>I want to contribute to the knowledge we have developed so far in CS to advance human capital development and the preservation of peace and life.</green>',
-        '<green>Thus, I am getting my act together to hopfully make something out of all these bits of time!</green>',
+        '<green>Thus, I am getting my act together to hopefully make something out of all these bits of time!</green>',
         '<green>Peace Out!</green>', 
         ''
     ],
