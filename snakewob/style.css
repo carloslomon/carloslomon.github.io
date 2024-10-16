@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0; 
+    background: linear-gradient(to right, #82d682, #487748);
+    height: 100vh;
+    margin: 0;
+}
+
+#gameContainer{
+    position: relative; 
+    background-size: cover;
+    width: 600;
+    height: 600;
+    margin: 50px auto;
+   
+}
+
+canvas{
+    display: block;
+    margin: 0 auto; 
+    margin-top: 100px; 
+    background-color: green;
+    border: solid black 5px;
+    
+    
+}
+
+
+
+#snake-header {
+    font-size: 5em;
+    color: transparent;  /* Hide default text color */
+    position: center;
+    transition: transform 0.2s ease;
+    background-image: linear-gradient(90deg, #006400 20%, #32CD32 40%, #ADFF2F 60%, #32CD32 80%, #006400 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+}
+
+/* Hover effect */
+.snake-span-one{
+    transform: translate(-10px, -10px);
+}
+.snake-span-one.hovered {
+    animation: snakeMove 2s infinite;
+}
+.snakes-span-two{
+    transform: translate(-3px, -10px);
+
+}
+
+@keyframes snakeMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(15px, -10px);
+    }
+    50% {
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#restart-btn{
+    margin-top: -1px;
+    font-size: 2em;
+    color: #fff;
+    background-color: red;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-btn{
+    margin-top: -1px;
+    font-size: 2em;
+    color: #fff;
+    background-color: #00f;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-div{
+    margin-top: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;    /* Vertically center */
+}
