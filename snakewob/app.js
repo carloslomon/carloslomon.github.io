@@ -101,7 +101,6 @@ function updateGame() {
   for (let i = 1; i < snake.length; i++) {
     if (snake[i].x === head.x && snake[i].y === head.y) {
       gameOver();
-      gameloop = false;
       return;
     }
   }
