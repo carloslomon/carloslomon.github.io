@@ -425,7 +425,7 @@ async function uploadToQuickbase() {
 
     // Send the payload to Quickbase
     try {
-        const response = await fetch(`https://${domain}/db/${table_id}?a=API_AddRecord`, {
+        const response = await fetch(`https://${domain}/db/${table_id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/xml",
