@@ -1,0 +1,117 @@
+/* Button Styles */
+body .btn-group button {
+    background-color: darkmagenta !important;
+    border: 2px solid red !important;
+    color: #ffffff !important;
+    padding: 1em 1.5em !important;
+    cursor: pointer !important;
+    width: 60% !important; /* Default */
+    display: block !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
+    margin-top: 2em !important;
+    border-radius: 8px; /* Rounded corners */
+}
+
+body .btn-group button:not(:last-child) {
+    margin-bottom: 1em; /* Spacing between buttons */
+    border-bottom: none !important; /* Prevent double borders */
+}
+
+body .btn-group button:hover {
+    background-color: #d30ded !important;
+    transform: scale(1.05) !important;
+}
+
+body .btn-group button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #d30ded !important;
+}
+
+@media (max-width: 768px) {
+    body .btn-group button {
+        width: 90% !important; /* Responsive for smaller screens */
+    }
+}
+
+body .btn-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* List Styling */
+body li.list-group-item {
+    align-items: center !important;
+    text-align: center !important;
+}
+
+body ul.list-group {
+    margin: 2em;
+}
+
+/* Section Styling */
+body section.cedula-section {
+    background-color: lightgrey !important;
+    text-align: center !important;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+/* Heading Centering */
+body .instrucciones div.instrucciones > div.card h1,
+body .instrucciones div.instrucciones > h1,
+body .instrucciones div.instrucciones > h2,
+body .instrucciones div.instrucciones > h3,
+body .instrucciones div.instrucciones > h4,
+body .instrucciones div.instrucciones > h5,
+body .instrucciones div.instrucciones > h6 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* Image Styling */
+body img.card-img-top {
+    max-width: 45vw !important; /* 45% of the viewport width */
+    max-height: 45vh !important; /* 45% of the viewport height */
+    object-fit: contain !important; /* Ensures the image scales proportionally */
+    display: block !important; /* Ensures no inline spacing */
+    margin: auto !important; /* Centers the image */
+    max-width: 100%; /* Fallback */
+    max-height: 100%; /* Fallback */
+}
+
+#cedula-section .card-img-top {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    #cedula-section .card {
+        margin: 1em auto;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group button {
+        width: 90%;
+        margin-bottom: 1em;
+    }
+}
+body div.space {
+    margin-top: 2.5em !important;
+    margin-bottom: 2.5em !important;
+}
+
+body div.space > div {
+    margin-top: 2.5em !important;
+    margin-bottom: 2.5em !important;
+}
+body section.container {
+    margin-bottom: 6em !important;
+}
