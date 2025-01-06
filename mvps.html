@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- PyScript CSS -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Homepage</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="https://www.youtube.com/@BamboozlingBit">Youtube</a>
+                  <a class="nav-link" href="https://www.youtube.com/@BamboozlingBit">YouTube</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Veinsa MVP Cedula
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="user-email-one">Correo electrónico o nombre de usuario</label>
+                          <input type="text" class="form-control" id="user-email-one" aria-describedby="emailHelp" placeholder="Correo electrónico o nombre de usuario">
+                          <small id="emailHelp3" class="form-text text-muted">No comparta sus datos</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="password1" placeholder="Contraseña">
+                        </div>
+                        <button id="submit3" type="submit" class="btn btn-primary" onclick="verificarUsuarioUno()">Entrar</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Game Center
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Correo electrónico o nombre de usuario</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="password2" placeholder="Contraseña">
+                        </div>
+                        <button id="submit2" type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Ioci AI
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="user-email-three">Correo electrónico o nombre de usuario</label>
+                          <input type="text" class="form-control" id="user-email-three" aria-describedby="emailHelp" placeholder="Correo electrónico o nombre de usuario">
+                          <small id="emailHelp3" class="form-text text-muted">No comparta sus datos</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="password3" placeholder="Contraseña">
+                        </div>
+                        <button id="submit3" type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>
