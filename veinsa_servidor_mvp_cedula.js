@@ -2,7 +2,7 @@
  * TODO(developer): Uncomment these variables before running the sample.
  */
 
-var API_URL = "";
+let API_URL = "";
 
 function setApiUrl(){
     API_URL = document.getElementById("url-text").value;
