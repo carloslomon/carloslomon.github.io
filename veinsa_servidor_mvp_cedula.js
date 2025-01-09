@@ -2,7 +2,11 @@
  * TODO(developer): Uncomment these variables before running the sample.
  */
 
+API_URL = "";
 
+function setApiUrl(){
+    API_URL = document.getElementById("seturl-btn").value;
+}
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
