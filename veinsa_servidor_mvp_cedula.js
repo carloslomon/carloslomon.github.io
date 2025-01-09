@@ -2,10 +2,10 @@
  * TODO(developer): Uncomment these variables before running the sample.
  */
 
-let API_URL = "";
+let API_URL = document.getElementById("url-text").value;
 
 function setApiUrl(){
-    API_URL = document.getElementById("url-text").value;
+    //API_URL = document.getElementById("url-text").value;
     divTmp = document.getElementById("url-div");
     divTmp.innerHTML += `<p>${API_URL}</p>`;
 }
