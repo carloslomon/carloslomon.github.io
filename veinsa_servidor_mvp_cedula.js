@@ -8,6 +8,7 @@ function setApiUrl(){
     API_URL = document.getElementById("url-text").value;
     divTmp = document.getElementById("url-div");
     divTmp.innerHTML += `<p>${API_URL}</p>`;
+    console.log(`API_URL set to: ${API_URL}`;
 }
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
@@ -101,9 +102,9 @@ function toggle_one_img_div() {
 }
 
 
-const API_URL_IMAGE = "{API_URL}/process-image"; // Python backend endpoint
-const API_URL_PASSWORD = "{API_URL}/verify-password";
-const API_URL_ADD_RECORD = "{API_URL}/quickbase-add-record";
+const API_URL_IMAGE = `${API_URL}/process-image`; // Python backend endpoint
+const API_URL_PASSWORD = `${API_URL}/verify-password`;
+const API_URL_ADD_RECORD = `${API_URL}/quickbase-add-record`;
 
 async function blobToFile(blob, fileName, mimeType) {
     return new File([blob], fileName, { type: mimeType });
