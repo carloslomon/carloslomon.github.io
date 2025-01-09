@@ -67,6 +67,15 @@
                     </div>
                 </div>
             </div>
+            <div class="container" id="url-div">
+                    <label for="">API_URL</label>
+                    <input type="text" class="form-control" id="url-text" value="">
+                    <div class="btn-group d-grip">
+                            <button id="set-url-btn" class="btn-group" onclick="setApiUrl()">
+                                Subir URL
+                            </button>
+                    </div>
+            </div>
             <div class="btn-group d-grid gap-2">
                 <button class="btn btn-primary" type="button" id="two-imgs" onclick="toggle_two_img_div()">
                     Dos imágenes
@@ -75,15 +84,7 @@
                 <button class="btn btn-primary" type="button" id="one-img" onclick="toggle_one_img_div()">
                     Una Imagen
                 </button>
-                <div class="container">
-                    <label for="">API_URL</label>
-                    <input type="text" class="form-control" id="url-text" value="">
-                    <div class="btn-group d-grip">
-                            <button id="set-url-btn" class="btn-group" onclick="setApiUrl()">
-                                Subir URL
-                            </button>
-                    </div>
-                </div>
+                
                 <div id="one-img-upload"></div>
             </div>
         </section>
