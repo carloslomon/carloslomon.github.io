@@ -8,7 +8,7 @@ function setApiUrl(){
     API_URL = document.getElementById("url-text").value;
     divTmp = document.getElementById("url-div");
     divTmp.innerHTML += `<p>${API_URL}</p>`;
-    console.log(`API_URL set to: ${API_URL}`;
+    console.log(`API_URL set to: ${API_URL}`);
 }
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
