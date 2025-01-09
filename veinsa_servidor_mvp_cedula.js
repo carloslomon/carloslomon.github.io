@@ -99,9 +99,9 @@ function toggle_one_img_div() {
 }
 
 
-const API_URL = " http://192.168.0.10:8080/process-image"; // Python backend endpoint
-const API_URL_PASSWORD = " http://192.168.0.10:8080/verify-password";
-const API_URL_ADD_RECORD = " http://192.168.0.10:8080/quickbase-add-record";
+const API_URL = "{API_URL}/process-image"; // Python backend endpoint
+const API_URL_PASSWORD = "{API_URL}/verify-password";
+const API_URL_ADD_RECORD = "{API_URL}/quickbase-add-record";
 
 async function blobToFile(blob, fileName, mimeType) {
     return new File([blob], fileName, { type: mimeType });
