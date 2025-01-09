@@ -101,7 +101,7 @@ function toggle_one_img_div() {
 }
 
 
-const API_URL = "{API_URL}/process-image"; // Python backend endpoint
+const API_URL_IMAGE = "{API_URL}/process-image"; // Python backend endpoint
 const API_URL_PASSWORD = "{API_URL}/verify-password";
 const API_URL_ADD_RECORD = "{API_URL}/quickbase-add-record";
 
@@ -130,7 +130,7 @@ async function uploadToBackend(file) {
 
 
     try {
-        const response = await fetch(API_URL, {
+        const response = await fetch(API_URL_IMAGE, {
             method: "POST",
             body: formData,
         });
