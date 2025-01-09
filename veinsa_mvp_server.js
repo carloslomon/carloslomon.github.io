@@ -12,6 +12,8 @@ MIME_JPEG = "image/png"
 FORM_FIELDS = null
 IMG_BASE64 = null
 
+API_URL = "";
+
 
 /*domicilio_electoral: MATAMA LIMÓN LIMÓN (Confidence: 1)
 fecha_nacimiento: 27 06 1943 (Confidence: 1)
@@ -25,6 +27,10 @@ numero_cedula_dos: 28471 4153 (Confidence: 1)
 primer_apellido: SANDAZA (Confidence: 1)
 segundo_apellido: CORUGEIRA (Confidence: 1)
 */
+function setApiUrl(){
+    API_URL = document.getElementById("seturl-btn").value;
+}
+
 
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
