@@ -5,7 +5,9 @@
 API_URL = "";
 
 function setApiUrl(){
-    API_URL = document.getElementById("seturl-btn").value;
+    API_URL = document.getElementById("url-text").value;
+    div = document.getElementById("url-div");
+    div.innerHTML = API_URL;
 }
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
