@@ -15,7 +15,7 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./veinsa_mvp.html">AI Consulting Cedula Extractor MVP</a>
+              <a class="navbar-brand" href="./veinsa_mvp.html">AI Consulting Cedula Extractor MVP</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -29,10 +29,8 @@
                         <a class="nav-link" aria-current="page" href="./veinsa_mvp.html">Subir Cedula</a>
                     
                     </li>
-
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./veinsa_mvp_search_edit.html">Buscar/Editar Cedula</a>
-                    
+                    <<li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./veinsa_mvp_search_edit.html">Buscar/Editar Cedula</a>
                     </li>
                   
                 </ul>
@@ -43,68 +41,67 @@
               </div>
             </div>
         </nav>
-
-        <section id="cedula-section-search-edit" class="container">
-            <div id="display-cedula-search" class="container">
-                <form>
-                    <div class="form-row align-items-center mb-3">
-                        <div class="col-auto my-1">
-                            <div class="form-group">
-                                <label for="search-numero-cedula">Número de cédula (x xxxx xxxx)</label>
-                                <input type="text" class="form-control" id="search-numero-cedula" 
-                                       placeholder="x xxxx xxxx" pattern="\d \d{4} \d{4}" required>
-                            </div>
-                        </div>
+        <section id="cedula-section" class="container">
+            <div class="instrucciones">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Asegúrese de que la imagen de la cédula sea clara sin distorsiones de luz
+                    </li>
+                    <li class="list-group-item">
+                        Si ya tiene la cédula en formato parte frontal y parte trasera verticalmente en una sola imagen dele click al botón de "Una Imagen"
+                    </li>
+                    <li class="list-group-item">
+                        Dele click a dos imágenes para subir la parte frontal y trasera
+                    </li>
+                </ul>
+                <h4>Aquí hay un ejemplo de cómo debería quedar la cédula</h4>
+                <div class="card">
+                    <img
+                        class="card-img-top"
+                        src="./assets/css/images/cedula_ff7103c9-e126-443f-8202-acc6b93ecd6c.jpg"
+                        alt="Cédula ficticia ejemplar"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Ejemplo de Formato Requerido</h5>
                     </div>
-                    <div class="form-row align-items-center mb-3">
-                        <div class="col-auto my-1">
-                            <div class="form-group">
-                                <label for="search-nombre-cedula">Nombre completo (mayúsculas)</label>
-                                <input type="text" class="form-control" id="search-nombre-cedula" 
-                                       placeholder="nombre segundo_nombre" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row align-items-center mb-3">
-                        <div class="col-auto my-1">
-                            <div class="form-group">
-                                <label for="search-primer-apellido-cedula">Primer apellido (mayúsculas)</label>
-                                <input type="text" class="form-control" id="search-primer-apellido-cedula" 
-                                       placeholder="1º Apellido" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row align-items-center mb-3">
-                        <div class="col-auto my-1">
-                            <div class="form-group">
-                                <label for="search-segundo-apellido-cedula">Segundo apellido (mayúsculas)</label>
-                                <input type="text" class="form-control" id="search-segundo-apellido-cedula" 
-                                       placeholder="2º Apellido" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row align-items-center mb-3">
-                        <div class="col-auto my-1">
-                            <div class="form-group">
-                                <label for="password-search">Contraseña</label>
-                                <input type="password" class="form-control" id="password-search" 
-                                       placeholder="Contraseña" required>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="btn-group d-grid">
-                    <button id="subir-form-uno" class="btn btn-primary" onclick="queryQuickbase()">Buscar en Quickbase</button>
                 </div>
             </div>
-            <div id="editar" class="container">
-
-            </div>
-            <div id="result-display" class="container">
-
+            
+            <div class="btn-group d-grid gap-2">
+                <button class="btn btn-primary" type="button" id="two-imgs" onclick="toggle_two_img_div()">
+                    Dos imágenes
+                </button>
+                <div id="two-imgs-upload"></div>
+                <button class="btn btn-primary" type="button" id="one-img" onclick="toggle_one_img_div()">
+                    Una Imagen
+                </button>
+                
+                <div id="one-img-upload"></div>
             </div>
         </section>
+        <br>
+        <br>
+        <section class="container space">
+            <div id="image-display-div">
+
+            </div>
+            <div id="key-value-pairs-div">
+
+            </div>
+            
+        </section>
+        <section class="container">
+            <div id="form-div">
+
+            </div>
+            <br>
+            <br>
+            <div id="sent-values">
+                
+            </div>
+        </section>
+
         
-        <script src="./veinsa_mvp_search_edit.js" defer></script>
+        <script src="./veinsa_servidor_mvp_cedula_dos.js" defer></script>
     </body>
 </html>
