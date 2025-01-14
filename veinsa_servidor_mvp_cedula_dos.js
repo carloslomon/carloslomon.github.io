@@ -2,16 +2,7 @@
  * TODO(developer): Uncomment these variables before running the sample.
  */
 
-let API_URL = "";
-let DIV_TMP = document.getElementById("url-div");
 
-
-function setApiUrl(){
-    API_URL = document.getElementById("url-text").value;
-    divTmp = document.getElementById("url-div");
-    divTmp.innerHTML += `<p id="api-paragraph">${API_URL}</p>`;
-    console.log(`API_URL set to: ${API_URL}`);
-}
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -166,7 +157,6 @@ async function passwordCheck(password) {
     }
 
     try {
-        document.getElementById("api-paragraph").innerHTML += `<p>${API_URL_PASSWORD}</p>`;
         const response = await fetch(API_URL_PASSWORD, {
             method: "POST",
             headers: {
