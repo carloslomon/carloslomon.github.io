@@ -104,9 +104,9 @@ function toggle_one_img_div() {
 }
 
 
-const API_URL_IMAGE =  API_URL + "/process-image"; // Python backend endpoint
-const API_URL_PASSWORD = API_URL + "/verify-password";
-const API_URL_ADD_RECORD = API_URL + "/quickbase-add-record";
+const API_URL_IMAGE = "https://bd61-2803-6000-e007-d7-cd19-d587-faec-9146.ngrok-free.app/process-image"; // Python backend endpoint
+const API_URL_PASSWORD = "https://bd61-2803-6000-e007-d7-cd19-d587-faec-9146.ngrok-free.app/verify-password";
+const API_URL_ADD_RECORD ="https://bd61-2803-6000-e007-d7-cd19-d587-faec-9146.ngrok-free.app/quickbase-add-record";
 //DIV_TMP.innerHTML += `<p>${API_URL_IMAGE}</p>`;
 //DIV_TMP.innerHTML += `<p>${API_URL_PASSWORD}</p>`;
 //DIV_TMP.innerHTML += `<p>${API_URL_ADD_RECORD}</p>`;
