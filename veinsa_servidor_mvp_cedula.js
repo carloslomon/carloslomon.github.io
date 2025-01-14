@@ -9,7 +9,7 @@ let DIV_TMP = document.getElementById("url-div");
 function setApiUrl(){
     API_URL = document.getElementById("url-text").value;
     divTmp = document.getElementById("url-div");
-    divTmp.innerHTML += `<p>${API_URL}</p>`;
+    divTmp.innerHTML += `<p id="api-paragraph">${API_URL}</p>`;
     console.log(`API_URL set to: ${API_URL}`);
 }
 function imageToBase64(file) {
@@ -104,9 +104,9 @@ function toggle_one_img_div() {
 }
 
 
-const API_URL_IMAGE = `${API_URL}` + "/process-image"; // Python backend endpoint
-const API_URL_PASSWORD = `${API_URL}` + "/verify-password";
-const API_URL_ADD_RECORD = `${API_URL}` + "/quickbase-add-record";
+const API_URL_IMAGE =  API_URL + "/process-image"; // Python backend endpoint
+const API_URL_PASSWORD = API_URL + "/verify-password";
+const API_URL_ADD_RECORD = API_URL + "/quickbase-add-record";
 //DIV_TMP.innerHTML += `<p>${API_URL_IMAGE}</p>`;
 //DIV_TMP.innerHTML += `<p>${API_URL_PASSWORD}</p>`;
 //DIV_TMP.innerHTML += `<p>${API_URL_ADD_RECORD}</p>`;
@@ -166,7 +166,7 @@ async function passwordCheck(password) {
     }
 
     try {
-        DIV_TMP.innerHTML += `<p>${API_URL_PASSWORD}</p>`;
+        document.getElementById("api-paragraph").innerHTML += `<p>${API_URL_PASSWORD}</p>`;
         const response = await fetch(API_URL_PASSWORD, {
             method: "POST",
             headers: {
