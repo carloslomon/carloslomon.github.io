@@ -317,12 +317,6 @@ function showForm(dict){
                                             <input type="text" class="form-control" id="${entity.key}_new" value="${entity.value}">
                                         </div>
                                     </div>
-                                    <div class="col-auto my-1">
-                                        <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="{entity.key}_correcto">
-                                            <label class="custom-control-label" for="nombre-correcto">Dele click si ${KEY2TEXT[entity.key]}</label>
-                                        </div>
-                                    </div>
                                 </div>`;
         });
         output.innerHTML += "</form>";
