@@ -360,12 +360,12 @@ async function uploadToQuickbase() {
         let fieldId = NAME2FIELDS[k];
         if (fieldId) {
             let tmp = document.getElementById(`${k}_new`);
-            datArr[`${fieldId}`] = {"value":`${result[k]}`} 
+            datArr[`${fieldId}`] = {"value":`${tmp.value}`} 
             if(k == "nombre" || k == "primer_apellido" || k == "segundo_apellido"|| k == "numero_cedula"){
-                nombre_dic[k] = result[k];
+                nombre_dic[k] = tmp.value;
             }
             fids2Return.push(fieldId)
-            sent_text += `<p>${k}: ${result[k]}</p>`
+            sent_text += `<p>${k}: ${tmp.value}</p>`
         }
     });
     sentDiv.innerHTML = sent_text;
