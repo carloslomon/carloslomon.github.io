@@ -139,8 +139,18 @@ async function uploadToBackend(file) {
 
         const result = await response.json();
         console.log("Documento Procesado:", result);
+        if(!result.hasOwnProperty("primer_apellido")){
+            result["primer_apellido"] = "";
+        }
+        if(!result.hasOwnProperty("nombre")){
+            result["nombre"] = "";
+        }
+        if(!result.hasOwnProperty("segundo_apellido")){
+            result["segundo_apellido"] = "";
+        }
         displayResult(result);
         showForm(result);
+        
         FORM_FIELDS = result;
         return result;
     } catch (error) {
