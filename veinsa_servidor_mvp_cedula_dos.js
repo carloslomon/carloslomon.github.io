@@ -20,7 +20,8 @@ KEY2TEXT = {"nombre": "el nombre estaba correcto", "primer_apellido": "el 1º ap
     "fecha_nacimiento": "la fecha de nacimiento estaba correcta", "fecha_vencimiento": "la fecha de vencimiento estaba correcta", "lugar_nacimiento": "el lugar de nacimiento estaba correcto", "nombre_madre": "el nombre de la madre estaba correcto", "nombre_padre": "el nombre del padre estaba correcto" , "domicilio_electoral": "el domicilio electoral estaba correcto"}
 
  
-
+TEMPLATE = {"nombre": "NULL", "primer_apellido": "NULL", "segundo_apellido": "NULL", "numero_cedula": "NULL", "numero_cedula_dos": "NULL", 
+    "fecha_nacimiento": "NULL", "fecha_vencimiento": "NULL", "lugar_nacimiento": "NULL", "nombre_madre": "NULL", "nombre_padre": "NULL", "domicilio_electoral": "NULL"};
 
 
 function blobToBase64(blob) {
@@ -136,19 +137,13 @@ async function uploadToBackend(file) {
         }
 
         const result = await response.json();
+        result.entities.forEach(entity => {
+            if(TEMPLATE.hasOwnProperty(entity.key)){
+                TEMPLATE[entity.key] = entity.value;
+        });
         console.log("Documento Procesado:", result);
-        if(!result.hasOwnProperty("primer_apellido") || result["primer_apellido"].length == 0 ){
-            result["primer_apellido"] = "__Null__";
-        }
-        if(!result.hasOwnProperty("nombre") || result["nombre"].length == 0){
-            result["nombre"] = "__Null__";
-        }
-        if(!result.hasOwnProperty("segundo_apellido") || result["segundo_apellido"].length == 0){
-            result["segundo_apellido"] = "__Null__";
-        }
-        console.log(result);
-        displayResult(result);
-        showForm(result);
+        displayResult(TEMPLATE);
+        showForm(TEMPLATE);
         
         FORM_FIELDS = result;
         return result;
