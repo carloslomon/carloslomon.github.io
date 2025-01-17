@@ -314,7 +314,7 @@ async function pasteImages(fileFrente, fileTrasera) {
 function showForm(dict){
             
     const output = document.getElementById("form-div");
-    output.innerHTML = `<h2>Texto Extraido:</h2><p>${dict.text}</p>`;
+    output.innerHTML = `<h2>Texto Extraido:</h2><p>${dict.text}</p><p>${dict}</p>`;
 
     if (dict.entities) {
         output.innerHTML += `<h2>Pares de Llave-Valor por Verificar:</h2><form>`;
