@@ -123,8 +123,6 @@ async function validateFile(inputId, mimeTypes) {
 async function uploadToBackend(file) {
     const formData = new FormData();
     formData.append("file", file);
-
-
     try {
         const response = await fetch(API_URL_IMAGE, {
             method: "POST",
@@ -139,14 +137,14 @@ async function uploadToBackend(file) {
 
         const result = await response.json();
         console.log("Documento Procesado:", result);
-        if(!result.hasOwnProperty("primer_apellido")){
-            result["primer_apellido"] = "";
+        if(!result.hasOwnProperty("primer_apellido") || result["primer_apellido"].length == 0 ){
+            result["primer_apellido"] = "__Null__";
         }
-        if(!result.hasOwnProperty("nombre")){
-            result["nombre"] = "";
+        if(!result.hasOwnProperty("nombre") || result["nombre"].length == 0){
+            result["nombre"] = "__Null__";
         }
-        if(!result.hasOwnProperty("segundo_apellido")){
-            result["segundo_apellido"] = "";
+        if(!result.hasOwnProperty("segundo_apellido") || result["segundo_apellido"].length == 0){
+            result["segundo_apellido"] = "__Null__";
         }
         displayResult(result);
         showForm(result);
