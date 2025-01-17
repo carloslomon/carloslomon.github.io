@@ -45,20 +45,20 @@ function toggle_two_img_div() {
             <br>
             <label for="cedula-trasera" class="form-label"> Reverso de Cédula</label>
             <input class="form-control" type="file" id="cedula-trasera" accept="image/png, image/jpg, image/jpeg"/>
-            <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                    <div class="form-group">
-                        <label for="">Por favor use la contraseña enviada a su celular o correo eletrónico</label>
-                        <input type="password" class="form-control" id="contrasena" value="">
-                    </div>
-                </div>
-            </div>
             <div class="d-grip">
                 <button class="submit-img" onclick="validateTwoImages()">
                     Procesar Imagenes
                 </button>
             </div>
         `;
+        /* <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <div class="form-group">
+                        <label for="">Por favor use la contraseña enviada a su celular o correo eletrónico</label>
+                        <input type="password" class="form-control" id="contrasena" value="">
+                    </div>
+                </div>
+            </div>*/
         two.html(newContentImgTwo) 
     }else{
         two.html('')
@@ -81,13 +81,13 @@ function toggle_one_img_div() {
                         <input type="password" class="form-control" id="contrasena2" value="">
                     </div>
                 </div>
-            </div>
-            <div class="d-grip">
-                <button class="submit-img" onclick="validateOneImage()">
-                    Procesar Imagenes
-                </button>
-            </div>
+        </div>
         `;
+        /* <div class="d-grip">
+            <button class="submit-img" onclick="validateOneImage()">
+                Procesar Imagenes
+            </button>
+        </div>*/
         one.html(newContentImgOne)
     }else{
         one.html('')
@@ -199,8 +199,8 @@ async function validateOneImage(){
     const file = await validateFile("cedula-completa", ["image/jpeg", "image/png"]);
     if (!file) return;
     displayImage(file);
-    let password = document.getElementById("contrasena2");
-    const password_bool = await passwordCheck(password.value);
+    //let password = document.getElementById("contrasena2");
+    const password_bool = true//await passwordCheck(password.value);
     if(password_bool){
         showTemporaryAlert("Procesando la imagen...", 3000);
         const result = await uploadToBackend(file);
@@ -228,9 +228,9 @@ async function validateTwoImages(){
         const combinedBlob = await pasteImages(fileFrente, fileTrasera);
         const combinedFile = await blobToFile(combinedBlob, "combined_image.png", fileFrente.type);
         displayImage(combinedFile);
-        let password = document.getElementById("contrasena");
-        console.log(password.innerText)
-        const password_bool = await passwordCheck(password.value);
+        //let password = document.getElementById("contrasena");
+        //console.log(password.innerText)
+        const password_bool = true//await passwordCheck(password.value);
         if(password_bool){
             showTemporaryAlert("Procesando la imagen combinada...", 3000);
             
