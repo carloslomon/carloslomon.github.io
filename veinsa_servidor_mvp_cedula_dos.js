@@ -143,7 +143,7 @@ async function uploadToBackend(file) {
             }
         });
         console.log("Documento Procesado:", result);
-        displayResult(template);
+        displayResult(result);
         showForm(template);
         
         FORM_FIELDS = template;
@@ -188,9 +188,9 @@ async function passwordCheck(password) {
 
 function displayResult(result) {
     const output = document.getElementById("key-value-pairs-div");
-    if (result.keys()) {
+    if (result.entities) {
         output.innerHTML += `<h2>Pares de Llave-Valor:</h2><ul class="list-group list-group-flush">`;
-        result.keys().forEach(entity => {
+        result.entities.forEach(entity => {
             output.innerHTML += `<li class="list-group-item"><strong>${entity.key}:</strong> ${entity.value} (Confidence: ${entity.confidence})</li>`;
         });
         output.innerHTML += "</ul>";
@@ -312,14 +312,14 @@ function showForm(dict){
     const output = document.getElementById("form-div");
     output.innerHTML = `<h2>Texto Extraido:</h2><p>${dict.text}</p><p>${dict}</p>`;
 
-    if (dict.keys()) {
+    if (Object.keys(dict)) {
         output.innerHTML += `<h2>Pares de Llave-Valor por Verificar:</h2><form>`;
-        dict.keys().forEach(entity => {
+        Object.keys(dict).forEach(k => {
             output.innerHTML += `<div class="form-row align-items-center">
                                     <div class="col-auto my-1">
                                         <div class="form-group">
-                                            <label for="">Verifique ${entity.key}</label>
-                                            <input type="text" class="form-control" id="${entity.key}_new" value="${entity.value}">
+                                            <label for="">Verifique ${k}</label>
+                                            <input type="text" class="form-control" id="${k}_new" value="${dict[k]}">
                                         </div>
                                     </div>
                                 </div>`;
