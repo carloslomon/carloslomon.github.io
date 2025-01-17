@@ -356,7 +356,7 @@ async function uploadToQuickbase() {
     let nombre_dic = {};
     let sent_text = ``
     // Add extracted entities
-    result.keys().forEach(k => {
+    Object.keys(result).forEach(k => {
         let fieldId = NAME2FIELDS[entity.key];
         if (fieldId) {
             let tmp = document.getElementById(`${k}_new`);
