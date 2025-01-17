@@ -138,15 +138,15 @@ async function uploadToBackend(file) {
         template = {"nombre": "NULL", "primer_apellido": "NULL", "segundo_apellido": "NULL", "numero_cedula": "NULL", "numero_cedula_dos": "NULL",  "fecha_nacimiento": "NULL", "fecha_vencimiento": "NULL", "lugar_nacimiento": "NULL", "nombre_madre": "NULL", "nombre_padre": "NULL", "domicilio_electoral": "NULL"};
         const result = await response.json();
         result.entities.forEach(entity => {
-            if(template.hasOwnProperty(`${entity.key}`)){
-                TEMPLATE[`${entity.key}`] = `${entity.value}`;
+            if(template.keys().indexOf(`${entity.key}`) > -1){
+                template[`${entity.key}`] = `${entity.value}`;
             }
         });
         console.log("Documento Procesado:", result);
         displayResult(template);
         showForm(template);
         
-        FORM_FIELDS = result;
+        FORM_FIELDS = template;
         return result;
     } catch (error) {
         console.error("Error subiendo la imagen", error);
@@ -188,9 +188,9 @@ async function passwordCheck(password) {
 
 function displayResult(result) {
     const output = document.getElementById("key-value-pairs-div");
-    if (result.entities) {
+    if (result.keys()) {
         output.innerHTML += `<h2>Pares de Llave-Valor:</h2><ul class="list-group list-group-flush">`;
-        result.entities.forEach(entity => {
+        result.keys().forEach(entity => {
             output.innerHTML += `<li class="list-group-item"><strong>${entity.key}:</strong> ${entity.value} (Confidence: ${entity.confidence})</li>`;
         });
         output.innerHTML += "</ul>";
@@ -312,9 +312,9 @@ function showForm(dict){
     const output = document.getElementById("form-div");
     output.innerHTML = `<h2>Texto Extraido:</h2><p>${dict.text}</p><p>${dict}</p>`;
 
-    if (dict.entities) {
+    if (dict.keys()) {
         output.innerHTML += `<h2>Pares de Llave-Valor por Verificar:</h2><form>`;
-        dict.entities.forEach(entity => {
+        dict.keys().forEach(entity => {
             output.innerHTML += `<div class="form-row align-items-center">
                                     <div class="col-auto my-1">
                                         <div class="form-group">
@@ -344,7 +344,7 @@ async function uploadToQuickbase() {
 
     sentDiv = document.getElementById("sent-values")
     result = FORM_FIELDS 
-    if (!result || !result.entities) {
+    if (!result || result.keys().length == 0) {
         showTemporaryAlert("No data available to upload.", 3000);
         return;
     }
@@ -356,13 +356,13 @@ async function uploadToQuickbase() {
     let nombre_dic = {};
     let sent_text = ``
     // Add extracted entities
-    result.entities.forEach(entity => {
+    result.keys().forEach(k => {
         let fieldId = NAME2FIELDS[entity.key];
         if (fieldId) {
-            let tmp = document.getElementById(`${entity.key}_new`);
-            datArr[`${fieldId}`] = {"value":`${tmp.value}`} 
-            if(entity.key == "nombre" || entity.key == "primer_apellido" || entity.key == "segundo_apellido"|| entity.key == "numero_cedula"){
-                nombre_dic[entity.key] = tmp.value;
+            let tmp = document.getElementById(`${k}_new`);
+            datArr[`${fieldId}`] = {"value":`${result[k]}`} 
+            if(k == "nombre" || k == "primer_apellido" || k == "segundo_apellido"|| k == "numero_cedula"){
+                nombre_dic[k] = result[k];
     
             }
             fids2Return.push(fieldId)
