@@ -344,7 +344,7 @@ async function uploadToQuickbase() {
 
     sentDiv = document.getElementById("sent-values")
     result = FORM_FIELDS 
-    if (!result || result.keys().length == 0) {
+    if (!result || Object.keys(result).length == 0) {
         showTemporaryAlert("No data available to upload.", 3000);
         return;
     }
