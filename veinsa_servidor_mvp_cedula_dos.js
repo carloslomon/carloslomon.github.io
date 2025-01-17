@@ -319,7 +319,7 @@ function showForm(dict){
                                     <div class="col-auto my-1">
                                         <div class="form-group">
                                             <label for="">Verifique ${k}</label>
-                                            <input type="text" class="form-control" id="${k}_new" value="${dict[k]}">
+                                            <input type="text" class="form-control" id="${k}_new" value="${dict[k]}" onkeyup="this.value = this.value.toUpperCase();">
                                         </div>
                                     </div>
                                 </div>`;
