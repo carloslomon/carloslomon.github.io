@@ -146,6 +146,7 @@ async function uploadToBackend(file) {
         if(!result.hasOwnProperty("segundo_apellido") || result["segundo_apellido"].length == 0){
             result["segundo_apellido"] = "__Null__";
         }
+        console.log(result);
         displayResult(result);
         showForm(result);
         
