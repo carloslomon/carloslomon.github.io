@@ -357,16 +357,15 @@ async function uploadToQuickbase() {
     let sent_text = ``
     // Add extracted entities
     Object.keys(result).forEach(k => {
-        let fieldId = NAME2FIELDS[entity.key];
+        let fieldId = NAME2FIELDS[k];
         if (fieldId) {
             let tmp = document.getElementById(`${k}_new`);
             datArr[`${fieldId}`] = {"value":`${result[k]}`} 
             if(k == "nombre" || k == "primer_apellido" || k == "segundo_apellido"|| k == "numero_cedula"){
                 nombre_dic[k] = result[k];
-    
             }
             fids2Return.push(fieldId)
-            sent_text += `<p>${entity.key}: ${tmp.value}</p>`
+            sent_text += `<p>${k}: ${result[k]}</p>`
         }
     });
     sentDiv.innerHTML = sent_text;
