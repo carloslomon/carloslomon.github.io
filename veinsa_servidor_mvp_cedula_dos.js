@@ -193,7 +193,7 @@ async function passwordCheck(password) {
 
 function displayResult(result) {
     const output = document.getElementById("key-value-pairs-div");
-    if (result.entities && result.entities.length > 0) {
+    if (result.entities) {
         output.innerHTML += `<h2>Pares de Llave-Valor:</h2><ul class="list-group list-group-flush">`;
         result.entities.forEach(entity => {
             output.innerHTML += `<li class="list-group-item"><strong>${entity.key}:</strong> ${entity.value} (Confidence: ${entity.confidence})</li>`;
@@ -317,7 +317,7 @@ function showForm(dict){
     const output = document.getElementById("form-div");
     output.innerHTML = `<h2>Texto Extraido:</h2><p>${dict.text}</p>`;
 
-    if (dict.entities && dict.entities.length > 0) {
+    if (dict.entities) {
         output.innerHTML += `<h2>Pares de Llave-Valor por Verificar:</h2><form>`;
         dict.entities.forEach(entity => {
             output.innerHTML += `<div class="form-row align-items-center">
