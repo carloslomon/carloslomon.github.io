@@ -140,6 +140,7 @@ async function uploadToBackend(file) {
         result.entities.forEach(entity => {
             if(TEMPLATE.hasOwnProperty(entity.key)){
                 TEMPLATE[entity.key] = entity.value;
+            }
         });
         console.log("Documento Procesado:", result);
         displayResult(TEMPLATE);
