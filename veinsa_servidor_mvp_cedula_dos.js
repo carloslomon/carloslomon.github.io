@@ -138,7 +138,7 @@ async function uploadToBackend(file) {
         template = {"nombre": "NULL", "primer_apellido": "NULL", "segundo_apellido": "NULL", "numero_cedula": "NULL", "numero_cedula_dos": "NULL",  "fecha_nacimiento": "NULL", "fecha_vencimiento": "NULL", "lugar_nacimiento": "NULL", "nombre_madre": "NULL", "nombre_padre": "NULL", "domicilio_electoral": "NULL"};
         const result = await response.json();
         result.entities.forEach(entity => {
-            if(template.keys().indexOf(`${entity.key}`) > -1){
+            if(Object.keys(template).indexOf(`${entity.key}`) > -1){
                 template[`${entity.key}`] = `${entity.value}`;
             }
         });
