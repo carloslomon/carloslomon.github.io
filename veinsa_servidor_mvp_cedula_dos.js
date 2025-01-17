@@ -135,16 +135,16 @@ async function uploadToBackend(file) {
             showTemporaryAlert(`Error del servidor: ${error.error}`, 3000);
             return null;
         }
-
+        template = {"nombre": "NULL", "primer_apellido": "NULL", "segundo_apellido": "NULL", "numero_cedula": "NULL", "numero_cedula_dos": "NULL",  "fecha_nacimiento": "NULL", "fecha_vencimiento": "NULL", "lugar_nacimiento": "NULL", "nombre_madre": "NULL", "nombre_padre": "NULL", "domicilio_electoral": "NULL"};
         const result = await response.json();
         result.entities.forEach(entity => {
-            if(TEMPLATE.hasOwnProperty(entity.key)){
-                TEMPLATE[entity.key] = entity.value;
+            if(template.hasOwnProperty(`${entity.key}`)){
+                TEMPLATE[`${entity.key}`] = `${entity.value}`;
             }
         });
         console.log("Documento Procesado:", result);
-        displayResult(TEMPLATE);
-        showForm(TEMPLATE);
+        displayResult(template);
+        showForm(template);
         
         FORM_FIELDS = result;
         return result;
