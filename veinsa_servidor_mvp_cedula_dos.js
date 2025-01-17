@@ -74,19 +74,19 @@ function toggle_one_img_div() {
         const newContentImgOne = `
         <label for="cedula-completa" class="form-label">Cédula Completa</label>
         <input class="form-control" type="file" id="cedula-completa" accept="image/png, image/jpeg"/>
-        <div class="form-row align-items-center">
+        <div class="d-grip">
+            <button class="submit-img" onclick="validateOneImage()">
+                Procesar Imagenes
+            </button>
+        </div>
+        `;
+        /* <div class="form-row align-items-center">
                 <div class="col-auto my-1">
                     <div class="form-group">
                         <label for="">Por favor use la contraseña enviada a su celular o correo eletrónico</label>
                         <input type="password" class="form-control" id="contrasena2" value="">
                     </div>
                 </div>
-        </div>
-        `;
-        /* <div class="d-grip">
-            <button class="submit-img" onclick="validateOneImage()">
-                Procesar Imagenes
-            </button>
         </div>*/
         one.html(newContentImgOne)
     }else{
