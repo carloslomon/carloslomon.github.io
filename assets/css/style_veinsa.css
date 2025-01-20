@@ -1,5 +1,5 @@
 /* Button Styles */
-body .btn-group button {
+body .btn-group button, body .btn-group a {
     background-color: darkmagenta !important;
     border: 2px solid red !important;
     color: #ffffff !important;
@@ -114,4 +114,10 @@ body div.space > div {
 }
 body section.container {
     margin-bottom: 6em !important;
+}
+
+#registro-section {
+    background-color: rgb(158, 154, 158);
+    padding: 3em;
+    border-radius: 5em;
 }
