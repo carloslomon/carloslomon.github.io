@@ -45,63 +45,24 @@
               </div>
             </div>
         </nav>
-        <section id="cedula-section" class="container">
+        <section id="cedula-juridica-section" class="container">
             <div class="instrucciones">
                 <ul class="list-group">
                     <li class="list-group-item">
-                        Asegúrese de que la imagen de la cédula sea clara sin distorsiones de luz
-                    </li>
-                    <li class="list-group-item">
-                        Si ya tiene la cédula en formato parte frontal y parte trasera verticalmente en una sola imagen dele click al botón de "Una Imagen"
-                    </li>
-                    <li class="list-group-item">
-                        Dele click a dos imágenes para subir la parte frontal y trasera
-                    </li>
-                     <li class="list-group-item">
-                        El formato debes ser ".jpg" o ".PNG"
+                        Asegúrese de que la cedula juridica tenga un formato PDF.
                     </li>
                 </ul>
-                <h4>Aquí hay un ejemplo de cómo debería quedar la cédula</h4>
-                <div class="card">
-                    <img
-                        class="card-img-top"
-                        src="./assets/css/images/cedula_ff7103c9-e126-443f-8202-acc6b93ecd6c.jpg"
-                        alt="Cédula ficticia ejemplar"
-                    />
-                    <div class="card-body">
-                        <h5 class="card-title">Ejemplo de Formato Requerido</h5>
-                    </div>
-                </div>
             </div>
             
                 
-            <div class="container" id="url-div">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <div class="form-group">
-                                <label for="url-text">API_URL</label>
-                                <input type="text" class="form-control" id="url-text" value="">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="btn-group d-grip">
-                    <button id="set-url-btn" class="btn-group" onclick="setApiUrl()">
-                        Subir URL
-                    </button>
-                </div>
-            </div>
-            <div class="btn-group d-grid gap-2">
-                <button class="btn btn-primary" type="button" id="two-imgs" onclick="toggle_two_img_div()">
-                    Dos imágenes
+            
+            <label for="cedula-juridica" class="form-label">Cedula Juridic</label>
+            <input class="form-control" type="file" id="cedula-juridica" accept=".pdf"/>
+            <br>
+            <div class="d-grip">
+                <button class="submit-img" onclick="processPDF()">
+                    Procesar Imagenes
                 </button>
-                <div id="two-imgs-upload"></div>
-                <button class="btn btn-primary" type="button" id="one-img" onclick="toggle_one_img_div()">
-                    Una Imagen
-                </button>
-                
-                <div id="one-img-upload"></div>
             </div>
         </section>
         <br>
