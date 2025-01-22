@@ -60,7 +60,7 @@ async function uploadToBackend(file) {
             showTemporaryAlert(`Error del servidor: ${error.error}`, 3000);
             return null;
         }
-        template = {"razon_social_o_denominacion": "NULL", "domicilio": "NULL", "estado_actual": "NULL", "persona_juridica": "NULL"};
+        template = {"razon_social_o_denominacion": "NULL", "domicilio": "NULL", "estado_actual": "NULL", "numero_persona_juridica": "NULL"};
         const result = await response.json();
         alert(`Texto Extraido: ${result.text}`)
         result.entities.forEach(entity => {
