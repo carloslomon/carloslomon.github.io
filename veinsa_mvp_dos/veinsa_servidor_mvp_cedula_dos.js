@@ -96,9 +96,9 @@ function toggle_one_img_div() {
 }
 
 
-const API_URL_IMAGE = "https://dccc-2803-6000-e007-d7-748e-2936-cf83-8041.ngrok-free.app/process-image"; // Python backend endpoint
-const API_URL_PASSWORD = "https://dccc-2803-6000-e007-d7-748e-2936-cf83-8041.ngrok-free.app/verify-password";
-const API_URL_ADD_RECORD ="https://dccc-2803-6000-e007-d7-748e-2936-cf83-8041.ngrok-free.app/quickbase-add-record-cedulas";
+const API_URL_IMAGE = "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/process-image"; // Python backend endpoint
+const API_URL_PASSWORD = "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/verify-password";
+const API_URL_ADD_RECORD ="https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/quickbase-add-record-cedulas";
 //DIV_TMP.innerHTML += `<p>${API_URL_IMAGE}</p>`;
 //DIV_TMP.innerHTML += `<p>${API_URL_PASSWORD}</p>`;
 //DIV_TMP.innerHTML += `<p>${API_URL_ADD_RECORD}</p>`;
