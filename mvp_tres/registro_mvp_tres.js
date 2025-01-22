@@ -1,6 +1,6 @@
 import { sharedHttpPoint } from '../shared.js';
-let API_URL_ADD_RECORD_CLIENTES = sharedHttpPoint + "/quickbase-add-record-clientes-uno";
-API_URL_CEDULA_JURIDICA = sharedHttpPoint + "/process-cedula-juridica";
+let API_URL_ADD_RECORD_CLIENTES = "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/quickbase-add-record-clientes-uno";
+API_URL_CEDULA_JURIDICA = sharedHttpPoint + "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/process-cedula-juridica";
 
 let DIV_TMP = document.getElementById("url-div");
 

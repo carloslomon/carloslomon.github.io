@@ -1,6 +1,6 @@
 import { sharedHttpPoint } from '../shared.js';
-API_PROCESAR_CEDULA_JURIDICA = sharedHttpPoint + "/procesar-cedula-juridica";
-API_ADD_QUICKBASE_JURIDICA = sharedHttpPoint + "/upload-cedula-juridica-files";
+API_PROCESAR_CEDULA_JURIDICA = "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/procesar-cedula-juridica";
+API_ADD_QUICKBASE_JURIDICA = "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/upload-cedula-juridica-files";
 NAME2FIELDS= {"razon_social_o_denominacion": 17, "domicilio": 15, "estado_actual": 14, "persona_juridica": 13};
 FORM_FIELDS = null;
 BASE64PDF = null;

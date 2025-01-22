@@ -1,8 +1,8 @@
 
-import { sharedHttpPoint } from '../shared.js';
-const API_URL_IMAGE = sharedHttpPoint + "/process-image"; // Python backend endpoint
-const API_URL_PASSWORD = sharedHttpPoint + "/verify-password";
-const API_URL_ADD_RECORD = sharedHttpPoint + "/quickbase-add-record-cedulas";
+//import { sharedHttpPoint } from '../shared.js';
+const API_URL_IMAGE =  "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/process-image"; // Python backend endpoint
+const API_URL_PASSWORD = "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/verify-password";
+const API_URL_ADD_RECORD = "https://dc48-2803-6000-e007-d7-49b7-2ffd-6c59-d136.ngrok-free.app/quickbase-add-record-cedulas";
 
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
