@@ -7,7 +7,7 @@ const API_URL_CEDULA =  "https://37d2-190-7-198-29.ngrok-free.app/procesar-cedul
 const API_URL_JURIDICA =  "https://37d2-190-7-198-29.ngrok-free.app/procesar-cedula-juridica";
 const API_URL_SUGEF =  "https://37d2-190-7-198-29.ngrok-free.app/procesar-documento-sugef";
 const API_URL_ADD_RECORD = "https://37d2-190-7-198-29.ngrok-free.app/subir-quickbase";
-https://37d2-190-7-198-29.ngrok-free.app
+//https://37d2-190-7-198-29.ngrok-free.app
 /*async function validateFile(inputId, mimeTypes) {
     const input = document.getElementById(inputId);
 
