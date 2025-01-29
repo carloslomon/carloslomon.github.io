@@ -1,7 +1,7 @@
-const API_URL_CEDULA =  "http://34.68.136.153:8888//procesar-cedula"; // Python backend endpoint
-const API_URL_JURIDICA =  "http://34.68.136.153:8888//procesar-cedula-juridica";
-const API_URL_SUGEF =  "http://34.68.136.153:8888//procesar-documento-sugef";
-const API_URL_ADD_RECORD = "http://34.68.136.153:8888//subir-quickbase";
+const API_URL_CEDULA =  "http://34.68.136.153:8888/procesar-cedula"; // Python backend endpoint
+const API_URL_JURIDICA =  "http://34.68.136.153:8888/procesar-cedula-juridica";
+const API_URL_SUGEF =  "http://34.68.136.153:8888/procesar-documento-sugef";
+const API_URL_ADD_RECORD = "http://34.68.136.153:8888/subir-quickbase";
 
 /*async function validateFile(inputId, mimeTypes) {
     const input = document.getElementById(inputId);
