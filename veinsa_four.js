@@ -3,10 +3,10 @@ const API_URL_JURIDICA =  "http://34.68.136.153:8888/procesar-cedula-juridica";
 const API_URL_SUGEF =  "http://34.68.136.153:8888/procesar-documento-sugef";
 const API_URL_ADD_RECORD = "http://34.68.136.153:8888/subir-quickbase";*/
 
-const API_URL_CEDULA =  "https://995b-190-7-198-29.ngrok-free.app/procesar-cedula"; // Python backend endpoint
-const API_URL_JURIDICA =  "https://995b-190-7-198-29.ngrok-free.app/procesar-cedula-juridica";
-const API_URL_SUGEF =  "https://995b-190-7-198-29.ngrok-free.app/procesar-documento-sugef";
-const API_URL_ADD_RECORD = "https://995b-190-7-198-29.ngrok-free.app/subir-quickbase";
+const API_URL_CEDULA =  "https://db1e-190-7-198-29.ngrok-free.app/procesar-cedula"; // Python backend endpoint
+const API_URL_JURIDICA =  "https://db1e-190-7-198-29.ngrok-free.app/procesar-cedula-juridica";
+const API_URL_SUGEF =  "https://db1e-190-7-198-29.ngrok-free.app/procesar-documento-sugef";
+const API_URL_ADD_RECORD = "https://db1e-190-7-198-29.ngrok-free.app/subir-quickbase";
 //https://37d2-190-7-198-29.ngrok-free.app
 /*async function validateFile(inputId, mimeTypes) {
     const input = document.getElementById(inputId);
