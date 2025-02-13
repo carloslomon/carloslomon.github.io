@@ -123,8 +123,8 @@ body section.container {
 }
 
 .main-title {
-    font-size: 3em; 
-    text-align: center; 
-    color: #69b3e7;
-    weight: 900;
+    font-size: 3em !important; 
+    text-align: center !important; 
+    color: #69b3e7 !important;
+    weight: 900 !important;
 }
