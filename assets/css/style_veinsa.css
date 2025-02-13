@@ -121,3 +121,10 @@ body section.container {
     padding: 3em;
     border-radius: 5em;
 }
+
+.main-title {
+    font-size: 3em; 
+    text-align: center; 
+    color: #69b3e7;
+    weight: 900;
+}
